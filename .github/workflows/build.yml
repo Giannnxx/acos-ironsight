@@ -17,6 +17,9 @@ jobs:
           java-version: 17
           distribution: 'temurin'
           cache: gradle
+          - name: Make gradlew executable
+  run: chmod +x gradlew
+  working-directory: android
       - name: Build and Sign APK
         env:
           KEYSTORE_FILE_PATH: ${{ github.workspace }}/signingkey.jks
