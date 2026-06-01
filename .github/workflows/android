@@ -23,7 +23,7 @@ jobs:
 
       - name: Make gradlew executable
         run: chmod +x gradlew
-        working-directory: android
+        working-directory: android/gradlew
 
       - name: Decode Keystore
         working-directory: android
