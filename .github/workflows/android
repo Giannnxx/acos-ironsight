@@ -14,7 +14,6 @@ jobs:
         with:
           fetch-depth: 0
           submodules: recursive
-
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -29,7 +28,7 @@ jobs:
       - name: Decode Keystore
         working-directory: android
         run: |
-          echo "${{ secrets.KEYSTORE_FILE }}" | base64 --decode > android/release.jks
+          echo "${{ secrets.KEYSTORE_FILE }}" | base64 --decode > release.jks
 
       - name: Build Signed Release APK
         working-directory: android
